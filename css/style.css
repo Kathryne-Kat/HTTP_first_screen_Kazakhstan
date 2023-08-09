@@ -1,0 +1,343 @@
+body {
+  color: #000000;
+  width: 100%;
+  background-color: #ffffff;
+  background-image: url(../img/el5.png), url(../img/el1.png),
+    url(../img/el2.png);
+  background-size: cover, auto, auto;
+  background-repeat: repeat, no-repeat, no-repeat;
+  background-position: center, top 100% left 10%, top 0 left 50%;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.03em;
+  height: 100%;
+}
+body,
+html {
+  height: 100%;
+  /* overflow-y: hidden; */
+}
+
+@media screen and (max-width: 870px) {
+  body {
+    background-image: url(../img/el5.png), url(../img/c-ug.png),
+      url(../img/c-l.png);
+    background-position: center, top 0 left 0, top 50% right 0;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+ul,
+ol {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+}
+img {
+  display: block;
+}
+input,
+textarea {
+  padding: 0;
+}
+
+address {
+  font-style: normal;
+}
+.list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.container {
+  width: 100%;
+  max-width: 1400px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 870px) {
+  .container {
+    padding-left: 0;
+    padding-right: 0;
+    height: 100%;
+  }
+}
+/* -----HEADER------ */
+.container.header {
+  display: flex;
+  align-items: center;
+  margin-top: 70px;
+  margin-bottom: 10px;
+}
+.page-header-s {
+  display: none;
+}
+@media screen and (max-width: 870px) {
+  .container.header {
+    margin-top: 0;
+    justify-content: center;
+  }
+  .page-header {
+    display: none;
+  }
+  .page-header-s {
+    display: block;
+  }
+}
+
+/* -----HERO------ */
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media screen and (max-width: 870px) {
+  .flex-container {
+    min-height: 100%;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+}
+.hero-img-bg {
+  position: relative;
+}
+.hero-img-bg::after {
+  content: "";
+  position: absolute;
+  top: 20%; /* Задайте нужное значение для вертикального смещения эффекта */
+  left: 5%; /* Задайте нужное значение для горизонтального смещения эффекта */
+  right: 0; /* Задайте нужное значение для горизонтального смещения эффекта */
+  bottom: 0; /* Задайте нужное значение для вертикального смещения эффекта */
+  width: 80%;
+  height: 80%;
+  background: #fc4343; /* Задайте нужный цвет вспышки */
+  border-radius: 50%; /* Чтобы сделать эффект круглой вспышки */
+  filter: blur(50px); /* Задайте нужную степень размытия */
+  z-index: -1; /* Чтобы вспышка находилась под картинкой */
+}
+.hero-img {
+  width: 800px;
+}
+.hero-img-small {
+  display: none;
+}
+@media screen and (max-width: 1460px) {
+  .hero-img {
+    width: 750px;
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 1360px) {
+  .hero-img {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 870px) {
+  .hero-img {
+    margin-left: 0px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .hero-img-bg {
+    margin: 0 auto;
+    max-width: 500px;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .clok {
+    width: 21px;
+    height: 21px;
+  }
+  .hero-img {
+    display: none;
+  }
+  .hero-img-small {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+  }
+  .hero-img-bg {
+    margin: 0 auto;
+    max-width: none;
+    width: 100%;
+  }
+  .hero-img {
+    /* display: none; */
+    margin: 0 auto;
+    max-width: none;
+    width: 100%;
+    object-fit: contain;
+  }
+}
+.hero-title {
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 1.13;
+  width: 590px;
+}
+.hero-title span {
+  color: #fc4343;
+}
+@media screen and (max-width: 1100px) {
+  .hero-title {
+    width: 450px;
+    font-size: 50px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .hero-title {
+    width: 360px;
+    font-size: 40px;
+  }
+}
+@media screen and (max-width: 870px) {
+  .hero-title {
+    margin-top: 20px;
+    font-size: 40px;
+    text-align: center;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .hero-title {
+    font-size: 36px;
+    margin-top: 0;
+  }
+}
+.hero-title-flex {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+.fleg-img {
+  border-radius: 3px;
+  width: 160px;
+  margin-left: 8px;
+  margin-top: 8px;
+  /* padding: 8px; */
+}
+@media screen and (max-width: 870px) {
+  .hero-title-flex {
+    justify-content: center;
+    /* flex-direction: column; */
+  }
+  .fleg-img {
+    /* display: block; */
+    width: 100px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .hero-title-flex p {
+    font-size: 24px;
+  }
+  .fleg-img {
+    width: 85px;
+  }
+}
+.hero-text-flex {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  margin-bottom: 40px;
+  margin-top: 20px;
+}
+.hero-text {
+  font-size: 20px;
+  line-height: 1.13;
+  padding-left: 15px;
+}
+.hero-text span {
+  font-weight: 700;
+}
+@media screen and (max-width: 940px) {
+  .hero-text-flex {
+    margin-bottom: 20px;
+  }
+}
+@media screen and (max-width: 870px) {
+  .hero-text-flex {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    justify-content: center;
+  }
+  .hero-text {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .hero-text {
+    font-size: 15px;
+  }
+}
+.btn-hero {
+  width: 364px;
+  height: 89px;
+  border: none;
+  border-radius: 11px;
+  background: linear-gradient(143deg, #fc4343 0%, #d73535 100%);
+  color: #fff;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.13;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin-bottom: 75px;
+  background: linear-gradient(143deg, #fc4343 0%, #d73535 100%);
+  box-shadow: 0 6px #bf3535, 0 3px 15px rgba(0, 0, 0, 0.4),
+    inset 0 1px rgba(255, 255, 255, 0.3), inset 0 0 3px rgba(255, 255, 255, 0.5);
+  transition: 0.2s;
+}
+
+.btn-hero:hover {
+  background: linear-gradient(143deg, #f82f2f 0%, #cf2727 100%);
+}
+.btn-hero:active {
+  background: linear-gradient(143deg, #f82f2f 0%, #cf2727 100%);
+  box-shadow: 0 2px #bf3535, 0 1px 6px rgba(0, 0, 0, 0.4),
+    inset 0 1px rgba(255, 255, 255, 0.3), inset 0 0 3px rgba(255, 255, 255, 0.5);
+  -webkit-transform: translate(0, 4px);
+  transform: translate(0, 4px);
+}
+@media screen and (max-width: 1200px) {
+  .btn-hero {
+    display: block;
+    margin-bottom: 10px;
+  }
+}
+@media screen and (max-width: 870px) {
+  .btn-hero {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .btn-hero {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    width: 280px;
+    height: 60px;
+    font-size: 17px;
+  }
+}
