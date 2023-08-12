@@ -198,13 +198,13 @@ address {
 }
 @media screen and (max-width: 1100px) {
   .hero-title {
-    width: 450px;
+    width: 520px;
     font-size: 50px;
   }
 }
 @media screen and (max-width: 1000px) {
   .hero-title {
-    width: 360px;
+    width: 480px;
     font-size: 40px;
   }
 }
@@ -283,6 +283,9 @@ address {
   }
 }
 @media screen and (max-width: 480px) {
+  .hero-text-flex {
+    margin-bottom: 10px;
+  }
   .hero-text {
     font-size: 15px;
   }
@@ -332,12 +335,22 @@ address {
 }
 
 @media screen and (max-width: 480px) {
+  .hero-img-bg {
+    position: relative;
+  }
+  .hero-img-small {
+    margin-bottom: 50px;
+  }
   .btn-hero {
-    display: block;
-    margin: 0 auto;
-    margin-bottom: 10px;
+    position: absolute;
+    bottom: 30px;
+    right: 5%;
+    left: 5%;
+    /* margin: 0 auto; */
+    margin-bottom: 0;
     width: 280px;
     height: 60px;
     font-size: 17px;
+    z-index: 10;
   }
 }
